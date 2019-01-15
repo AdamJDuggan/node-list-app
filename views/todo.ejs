@@ -1,0 +1,52 @@
+<!-- working -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>To do list</title>
+<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=font1|font2|etc" type="text/css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+<link rel="stylesheet" href="/assets/styles.css" type="text/css">
+</head>
+
+<body>
+
+<section class="hero is-dark is-large">
+<div class="container" style="margin-bottom: 20px;">
+<h1 class="title is-size-2" id="banner-text">Node things to do list app</h1>
+</div>
+</section>
+
+<section class="hero is-warning">
+<div class="container">
+<h1 class="title is-spaced is-size-4" id="two">Things to do list</h1>
+
+<div id="to-do">
+<form action="">
+<div class="field">
+<div class="control">
+<input class="input" type="text" placeholder="Add new item" required>
+</div>
+</div>
+<div class="field">
+<div class="control">
+<button type="submit" class="button is-dark">Add item</button>
+</div>
+</div>
+</form>
+
+<ul class="menu-list text-is-bold">
+<% for(let i = 0; i < todos.length; i++){ %>
+<li class="li"><a><%= todos[i].item %></li></a>
+<% } %>
+</ul>
+</div>
+
+</div>
+</section>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/assets/todo-list.js"></script>
+</body>
+</html>
